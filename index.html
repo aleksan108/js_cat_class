@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div style="margin-bottom: 20px">  
+            <label for="petName" style="color: indigo; font-size: 20px;"><b>Имя котика</b></label>
+            <br><input type="text" id="catNameID" style="width: 300px;" required/>
+        </div>
+        <div style="margin-bottom: 20px">  
+            <label for="contacts" style="color: midnightblue; font-size: 20px;"><b>Имя владельца</b></label>
+            <br><input type="text" id="humanNameID" style="width: 300px;" required/>
+        </div>
+        <div style="margin-bottom: 20px">  
+            <label for="phone" style="color: midnightblue; font-size: 20px;"><b>Телефон владельца</b></label>
+            <br><input type="tel" id="phoneID" style="width: 300px;" pattern="[\+]\d{1}[\(]\d{3}[\)]\d{2}[\-]\d{5}" required placeholder="+X(XXX)XX-XXXXX"/>
+        </div>
+        <div style="margin-bottom: 20px">  
+            <label for="email" style="color: midnightblue; font-size: 20px;"><b>Email владельца</b></label>
+            <br><input type="email" id="emailID" style="width: 300px;"/>
+        </div>
+        <div>
+            <label for="breed" style="color: darkorange; font-size: 20px;"><b>Порода котика</b></label>
+            <br><select id="breed" style="width: 300px;" id = "catTypeID">
+                <option value="null" selected="selected">---Сделайте выбор---</option>
+                <option value="siam">Сиамский</option>
+                <option value="bengal">Бенгальский</option>
+                <option value="pers">Персидский</option>
+                <option value="maykun">Мэй-Кун</option>
+                <option value="brit">Британский</option>
+                <option value="sphinx">Сфинкс</option>
+                <option value="manchkin">Маньчкин</option>
+                <option value="lord">Дворянский</option>
+            </select>
+        </div>
+        <div style="width: 300px;">
+            <fieldset style="background-color:rgb(226, 226, 226);">
+                <legend><h3 style="color:darkgreen;">Чем котик питается</h3></legend>
+                <input type="checkbox" name="food" value="1"/>Сухой корм<br>
+                <input type="checkbox" name="food" value="2"/>Влажный корм<br>
+                <input type="checkbox" name="food" value="3"/>Натуральный корм<br>
+            </fieldset>
+        </div>
+        <div style="width: 300px;">
+            <fieldset style="background-color:rgb(226, 226, 226);">
+                <legend><h3 style="color:darkred;">Mальчик или девочка</h3></legend>
+                <input type="radio" name="s" value="b"/>Хороший мальчик<br>
+                <input type="radio" name="s" value="g"/>Хорошая девочка<br>
+            </fieldset>
+        </div>
+        <div style="margin-top: 20px;">
+            <label for="comments" style="color:darkcyan; font-size: 20px;"><b>Комментарии владельца</b></label>
+            <br><textarea id="comments" cols="60" rows="10"></textarea>
+        </div>
+        <div>
+            <p style="color: darkslategrey;font-size: 20px;"><b>Фото котика</b></p>
+            <input type="file" name="photo" accept="image/png, image/jpeg"/>
+        </div>
+        <div style="margin: 20px 0px 20px 0px;">
+            <input type = "button" style="background-color:orange; border-color: darkred; cursor: pointer; padding:10px 45px" value ="ОК" id = "buttonID">
+                <img src="https://ru.seaicons.com/wp-content/uploads/2015/06/gold-fish-icon.png" alt="fish" style="height: 40px; vertical-align: middle" />
+            </input>
+        </div>
+    </form>
+    <script src="./scripts.js"></script>  
+</body>
+</html>
